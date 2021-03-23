@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+
 
 @Component({
   selector: 'app-admin-layout',
@@ -12,4 +13,13 @@ export class AdminLayoutComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  isMac(): boolean {
+    let bool = false;
+    if (navigator.platform.toUpperCase().indexOf('MAC') >= 0 || navigator.platform.toUpperCase().indexOf('IPAD') >= 0) {
+      bool = true;
+    }
+    return bool;
+  }
+
 }
