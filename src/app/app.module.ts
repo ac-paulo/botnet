@@ -10,13 +10,13 @@ import { AppRouting } from './app.routing';
 
 import { AppComponent } from './app.component';
 
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { BotnetsComponent } from './layouts/botnets/botnets.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
+    BotnetsComponent,
   ],
   imports: [
     BrowserAnimationsModule,

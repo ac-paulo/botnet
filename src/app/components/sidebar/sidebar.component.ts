@@ -8,7 +8,7 @@ declare interface RouteInfo {
   class: string;
 }
 export const ROUTES: RouteInfo[] = [
-  { path: '/init4', title: 'init4',  icon: 'dashboard', class: '' },
+  { path: '/', title: 'init4',  icon: 'dashboard', class: '' },
 ];
 
 @Component({
@@ -27,7 +27,7 @@ export class SidebarComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   isMobileMenu() {
-    return $(window).width() <= 991;
+    return false;
   }
 
 }
