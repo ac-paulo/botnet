@@ -1,0 +1,15 @@
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let botnet of botnets">
+
+    <mat-icon matListIcon style="color: #39cb00" *ngIf="botnet.status">cloud_done</mat-icon>
+    <mat-icon matListIcon style="color: #c40a12" *ngIf="!botnet.status">cloud_off</mat-icon>
+    <h3 matLine> {{botnet.displayName}} | {{botnet.ipv4}} | {{botnet.uuid }}</h3>
+    <p matLine>
+      <span> {{botnet.osName}} {{botnet.kernel}} {{botnet.arch}} </span>
+    </p>
+    <p matLine>
+      {{botnet.memory}} MB | uptime: {{botnet.uptime}} | {{botnet.created_at}}
+    </p>
+  </mat-list-item>
+</mat-list>
+

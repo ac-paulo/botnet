@@ -1,51 +1,35 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-
-import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ListBotnetsComponent } from './list-botnets/list-botnets.component';
-import { MatButtonModule } from '@angular/material/button';
-import { ListOffBotnetsComponent } from './list-off-botnets/list-off-botnets.component';
-
-import { MatInputModule } from '@angular/material/input';
-import { MatRippleModule } from '@angular/material/core';
+import { BotnetsPanelComponent } from './botnets-panel/botnets-panel.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatSelectModule } from '@angular/material/select';
-import { TrBotnetComponent } from './tr-botnet/tr-botnet.component';
-import { CardInfoComponent } from './card-info/card-info.component';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { BotnetAddComponent } from './botnet-add/botnet-add.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    FooterComponent,
-    SidebarComponent,
-    NavbarComponent,
-    ListBotnetsComponent,
-    ListOffBotnetsComponent,
-    TrBotnetComponent,
-    CardInfoComponent
+    BotnetsPanelComponent,
+    BotnetAddComponent
   ],
   exports: [
-    SidebarComponent,
-    NavbarComponent,
-    FooterComponent,
-    ListBotnetsComponent,
-    ListOffBotnetsComponent,
-    CardInfoComponent
+    BotnetsPanelComponent
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    MatButtonModule,
-    MatInputModule,
-    MatRippleModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatDatepickerModule,
     MatFormFieldModule,
-    MatTooltipModule,
-    MatSelectModule
+    MatInputModule,
+    MatButtonModule,
+    MatListModule,
+    ReactiveFormsModule
   ]
 })
 export class ComponentsModule { }

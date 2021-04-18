@@ -1,33 +1,31 @@
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
-import { ComponentsModule } from './components/components.module';
-import { AppRouting } from './app.routing';
 
 import { AppComponent } from './app.component';
-
-import { BotnetsComponent } from './layouts/botnets/botnets.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentsModule } from './components/components.module';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routing.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BotnetsComponent,
+    AppComponent
   ],
   imports: [
+    BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
     ComponentsModule,
-    RouterModule,
-    AppRouting,
+    MatGridListModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MatSidenavModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

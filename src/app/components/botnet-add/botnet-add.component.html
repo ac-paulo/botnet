@@ -1,0 +1,42 @@
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Display Name to Bot</mat-label>
+    <input matInput placeholder="waun-unmixupi" [formControl]="displayName" required>
+    <mat-error *ngIf="displayName.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ip Addr</mat-label>
+    <input matInput placeholder="xxx.xxx.xxx.xxx" [formControl]="ipv4" required>
+    <mat-error *ngIf="ipv4.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Arch</mat-label>
+    <input matInput placeholder="Linux or Windows" [formControl]="arch" required>
+    <mat-error *ngIf="arch.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>OS Name</mat-label>
+    <input matInput placeholder="OS version" [formControl]="osName" required>
+    <mat-error *ngIf="osName.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</div>
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Kernel Version</mat-label>
+    <input matInput placeholder="kernel version" [formControl]="kernel" required>
+    <mat-error *ngIf="kernel.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Memory Total</mat-label>
+    <input matInput type="number" placeholder="Memory" [formControl]="memory" required>
+    <mat-error *ngIf="memory.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Uptime</mat-label>
+    <input matInput type="number" placeholder="uptime in minutes" [formControl]="uptime" required>
+    <mat-error *ngIf="uptime.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <div>
+    <button mat-raised-button color="primary">Enviar</button>
+  </div>
+</div>
