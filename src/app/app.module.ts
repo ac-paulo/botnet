@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {FirestoreModule} from './firestore/firestore.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatListModule} from '@angular/material/list';
     HttpClientModule,
     AppRoutingModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    FirestoreModule
   ],
   providers: [
   ],

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Botnets, BotnetsPanelService} from './botnets-panel.service';
+import {BotnetFirestoreService} from '../../shared/services/botnet-firestore.service';
 
 
 @Component({
@@ -13,11 +14,11 @@ export class BotnetsPanelComponent implements OnInit {
 
   botnets: Botnets[] = [];
 
-  constructor(private botnetService: BotnetsPanelService) {}
+  constructor(private botnetService: BotnetFirestoreService) {}
 
   ngOnInit(): void {
     this.botnetService
-      .listAllBotnets()
+      .list()
       .subscribe(botnets => {
         console.log(botnets);
         this.botnets = botnets;
